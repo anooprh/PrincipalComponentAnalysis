@@ -46,7 +46,9 @@ ylabel('sqrt - eigen value');
 title('Square Rooted Eigen Value Spectrum');
 figure
 
-PC1 = U(:,end);
+
+% Creating Scatter Plot
+PC1 = -U(:,end);
 PC2 = U(:,end-1);
 mean_repeated = repmat(mean_spike, 1, NUM_DATA);
 Z1 = PC1' * (Spikes - mean_repeated);
