@@ -1,3 +1,5 @@
+% Code For Problem 1
+
 % Load all data
 clear
 load 'ps7_data.mat'
@@ -52,7 +54,7 @@ PC2 = U(:,end-1);
 mean_repeated = repmat(mean_spike, 1, NUM_DATA);
 Z1 = PC1' * (Spikes - mean_repeated);
 Z2 = PC2' * (Spikes - mean_repeated);
-plot(Z1, Z2, '.k');
+plot(Z1, Z2, 'ok');
 xlabel('1st Component Score');
 ylabel('2nd Component Score');
 title('Scatter plot of Scores From First 2 components');
